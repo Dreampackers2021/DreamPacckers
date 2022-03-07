@@ -7,3 +7,123 @@
 @import 'sale';
 @import 'components';
 /* @use 'mixin' as m; */
+
+.header {
+    @include flex(space-between, center);
+    padding: 1rem;
+    &:before {
+      content: "";
+      flex: 1;
+    }
+    &-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        width: 15rem;
+        @include text_center();
+      }
+    }
+    &-left {
+      @include flex(null, center);
+    }
+    &-menu {
+      padding: 0 1rem;
+      @include flex(null, center);
+      gap: 0.5rem;
+      @media screen and (min-width: 1159px) {
+        &-list:not(:last-child):after {
+          content: "/";
+          padding-left: 0.5rem;
+        }
+      }
+      &-list a {
+        color: black;
+      }
+    }
+    &-icon {
+      .icon-email,
+      a {
+        @include text_center();
+      }
+    }
+    @include minw(1200px) {
+      .menubar {
+        display: none;
+      }
+    }
+  }
+  
+  @include maxw(1200px) {
+    .header {
+      z-index: 1000;
+      box-shadow: 0 0 10px #666;
+    }
+    .menubar {
+      display: block;
+      display: flex;
+      align-items: center;
+      order: 1;
+      padding-left: 0.3rem;
+      .icon-close {
+        display: none;
+      }
+    }
+    .header-logo img {
+      width: 12rem;
+      justify-content: space-between;
+    }
+    .overlay {
+      z-index: 1;
+      background-color: gray;
+      position: absolute;
+      left: 0;
+      top: 58px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      transition: all 0.35s ease-in-out;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  
+    .header-menu {
+      position: absolute;
+      width: 100%;
+      /* height: calc(100vh - 60px); */
+      left: 0;
+      top: 58px;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.75);
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+      z-index: 2;
+      padding: 0;
+      li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        a {
+          display: block;
+        }
+      }
+      li:hover {
+        text-align: center;
+        background-color: black;
+        a {
+          color: white;
+        }
+      }
+      &.active {
+        max-height: 250px;
+        overflow: visible;
+        background-color: white;
+      }
+    }
+  }

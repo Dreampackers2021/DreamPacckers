@@ -1,3 +1,4 @@
+
 .main-content {
   margin-bottom: 5rem;
   > section:not(:first-child) {
@@ -5,20 +6,29 @@
     padding-left: 3rem;
   }
   .banner {
-    @include flex(null, null);
+    @include minw(1200px){
+      @include flex(null, null);
+    }
     .banner-l,
     .banner-r {
       position: relative;
       .btn {
         position: absolute;
         bottom: 18%;
-        left: 38%;
+        left: 50%;
+        transform: translateX(-50%);
         border: 2px solid white;
         background-color: white;
         color: black;
         padding: 14px 28px;
         font-size: 16px;
         cursor: pointer;
+        @include minw (678px) {
+          bottom: 12%;
+        }
+        @include maxw (677px) {
+          bottom: 12%;
+        }
       }
       .btn:hover {
         background-color: black;
@@ -26,6 +36,7 @@
       .btn:hover a {
         color: white;
       }
+     
     }
     img {
       width: 100%;
@@ -40,7 +51,7 @@
 }
 
 .news-list {
-  line-height: 1rem;
+  line-height: 1;
   li {
     padding-bottom: 2rem;
     a {
@@ -64,5 +75,8 @@
     flex-direction: column;
     gap: 0.5rem;
     padding-top: 1rem;
+    .company-info-en {
+      font-size: .8rem;
+    }
   }
 }

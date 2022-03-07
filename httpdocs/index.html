@@ -36,23 +36,26 @@
       rel="stylesheet"
     />
 
-    <link rel="import" href="./components/header.html" />
-    <title>Document</title>
+    <title>Dream Packers</title>
   </head>
   <body>
     <div class="wrapper">
       <header class="header"></header>
       <main class="main-content">
-        <section class="banner">
-          <div class="banner-l">
+        <section class="banner img-slider">
+          <div class="banner-l slider active">
             <img src="./assets/img/banner-l.png" alt="" />
             <button class="btn">
               <a href="./sale.html">VIEW MORE</a>
             </button>
           </div>
-          <div class="banner-r">
+          <div class="banner-r slider">
             <img src="./assets/img/banner-r.png" alt="" />
             <button class="btn"><a href="#">VIEW MORE</a></button>
+          </div>
+          <div class="navigation">
+            <div class="dot active"></div>
+            <div class="dot"></div>
           </div>
         </section>
         <section class="news" id="news">
@@ -82,14 +85,14 @@
           </div>
           <div class="client-info content-text-padding">
             <p>
-              株式会社ストライプインターナショナル 株式会社パル
-              株式会社バロックジャパンリミテッド 株式会社ナイスクラップ
-              株式会社マグスタイル 株式会社サザビーリーグ <br />
-              株式会社ベイクルーズ 株式会社アイジーエー 株式会社ダブルエー
-              株式会社ちふれ化粧品 株式会社ネットワーク 株式会社キャン
-              株式会社ネイチャーズウェイ 株式会社グラニフ 株式会社sクー<br />
-              株式会社アルファベットパステル 国立大学法人東京大学
-              国立大学法人東北大学
+              株式会社ストライプインターナショナル 株式会社パル /
+              株式会社バロックジャパンリミテッド / 株式会社ナイスクラップ /
+              株式会社マグスタイル / 株式会社サザビーリーグ <br />
+              株式会社ベイクルーズ / 株式会社アイジーエー / 株式会社ダブルエー / 
+              株式会社ちふれ化粧品 / 株式会社ネットワーク / 株式会社キャン / 
+              株式会社ネイチャーズウェイ / 株式会社グラニフ / 株式会社sクー<br />
+              株式会社アルファベットパステル / 国立大学法人東京大学 / 
+              国立大学法人東北大学 / 
               光井純アンドアソシエーツ建築設計事務所株式会社　ほか
             </p>
           </div>
@@ -120,6 +123,9 @@
     </div>
 
     <!-- js file -->
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+    
     <script src="./scripts/main.js"></script>
+  
   </body>
 </html>

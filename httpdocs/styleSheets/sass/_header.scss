@@ -37,14 +37,14 @@
       @include text_center();
     }
   }
-  @include minw(1199px) {
+  @include minw(1200px) {
     .menubar {
       display: none;
     }
   }
 }
 
-@include maxw(1200px) {
+@include maxw(1199px) {
   .header {
     z-index: 1000;
     box-shadow: 0 0 10px #666;
@@ -75,7 +75,7 @@
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    &.active {
+    &.is-active {
       opacity: 1;
       visibility: visible;
     }
@@ -110,7 +110,7 @@
         color: white;
       }
     }
-    &.active {
+    &.is-active {
       max-height: 250px;
       overflow: visible;
       background-color: white;

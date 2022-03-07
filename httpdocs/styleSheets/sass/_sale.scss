@@ -45,7 +45,7 @@
   }
 }
 
-@include minw(1199px) {
+@include minw(1200px) {
   .page {
     max-width: 80%;
   }
@@ -58,11 +58,13 @@
 }
 
 @include maxw(768px) {
-  .product {
-    &-content
-    &-item {
-      padding: 0 .8rem;
+  .page {
+      &-content {
+        padding: 0.8rem;
+      }
     }
+  .product {
+    &-item {
       width: 100%;
       padding-top: 4rem;
     }
@@ -77,4 +79,4 @@
       padding-top: 1rem;
     }
   }
-
+}
