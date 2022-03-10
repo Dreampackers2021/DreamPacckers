@@ -1,40 +1,54 @@
 //Sale Promotion layout
 .page {
   margin: 0 auto;
-  padding: 0 0 8rem;
+  padding: 11rem 0 0;
   line-height: 1.5;
 }
-.page-content {
-  text-align: center;
-  line-height: 2rem;
-}
-.content {
+
+.sale {
+  &-content {
+    text-align: center;
+    line-height: 2rem;
+  }
+
   &-title {
-    font-weight: 600;
     font-size: 1.5rem;
     padding: 1.5rem 0;
+    font-size: 11.8rem;
+    line-height: normal;
   }
+
+  &-subtitle {
+    font-weight: 600;
+    line-height: 2;
+    font-size: 1.9rem;
+  }
+
   &-desc {
     padding: 1rem 0;
-    font-size: 0.6rem;
+    font-size: 1.1rem;
   }
 }
+
 .product {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 4rem;
   &-item {
     width: 25%;
-    padding-top: 5rem;
+    padding-top: 12rem;
     text-align: center;
     &-text {
       font-size: 0.8rem;
     }
   }
+  
   &-title {
     padding-top: 2rem;
   }
+
   &-img {
     height: 200px;
     img {
@@ -45,13 +59,13 @@
   }
 }
 
-@include minw(1200px) {
+@include minw(1205px) {
   .page {
     max-width: 80%;
   }
 }
 
-@include maxw(1200px) {
+@include maxw(1204px) {
   .product-item {
     width: 50%;
   }
