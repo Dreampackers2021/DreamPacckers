@@ -132,7 +132,7 @@
 }
 
 .content-text-padding {
-  padding: 1rem 0 0 1rem;
+  padding: 2rem 0 0 1rem;
 }
 
 .news {
@@ -163,6 +163,9 @@
 
 .client {
   margin-top: 11rem;
+  &-info {
+    padding-top: 0.5rem !important;
+  }
   @include maxw(1024px) {
     margin-top: 9rem;
   }

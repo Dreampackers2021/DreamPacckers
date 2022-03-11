@@ -168,7 +168,7 @@ body {
 h2 {
   font-size: 7rem;
   text-transform: uppercase;
-  font-family: "Highway Gothic Narrow", sans-serif;
+  font-family: "Highway Gothic Narrow", "Helvetica Neue", sans-serif;
   line-height: 1;
 }
 
@@ -178,7 +178,7 @@ a {
 }
 
 .font-secondary {
-  font-family: "Highway Gothic Narrow", sans-serif;
+  font-family: "Highway Gothic Narrow", "Helvetica Neue", sans-serif;
 }
 
 @media screen and (max-width: 1024px) {
@@ -198,7 +198,7 @@ a {
     display: block;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -608,7 +608,7 @@ a {
 }
 
 .content-text-padding {
-  padding: 1rem 0 0 1rem;
+  padding: 2rem 0 0 1rem;
 }
 
 .news {
@@ -643,6 +643,10 @@ a {
 
 .client {
   margin-top: 11rem;
+}
+
+.client-info {
+  padding-top: 0.5rem !important;
 }
 
 @media screen and (max-width: 1024px) {
