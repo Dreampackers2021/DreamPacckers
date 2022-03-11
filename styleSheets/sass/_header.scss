@@ -1,0 +1,174 @@
+.header {
+  @include flex(space-between, center);
+  padding: 6.5rem 3rem 4.5rem;
+  line-height: normal;
+  &:before {
+    content: "";
+    flex: 1;
+  }
+
+  &-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      width: 48rem;
+      @include text_center();
+      @include maxw(1440px) {
+        width: 40rem
+      }
+    }
+  }
+
+  &-left {
+    @include flex(null, center);
+  }
+
+  &-menu {
+    padding: 0 1rem;
+    @include flex(null, center);
+    gap: 0.5rem;
+
+    &-list {
+      font-size: 2.9rem;
+      a {
+        color: black;
+      }
+      @include maxw (1440px ) {
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (min-width: 1159px) {
+      &-list:not(:last-child):after {
+        content: "/";
+        padding-left: 0.5rem;
+      }
+    }
+
+    
+  }
+
+  &-icon {
+    width: 4rem;
+    margin-left: 3rem;
+    img {
+      width: 100%;
+      @include text_center();
+    }
+    @include maxw (1440px) {
+      width: 3rem;
+    }
+    @include maxw (1024px) {
+      width: 2rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &-bcg {
+    background-color: $color-primary;
+  }
+
+}
+
+@include minw(1025px) {
+  .menubar {
+    display: none;
+  }
+}
+
+@include maxw(1024px) {
+  .header {
+    z-index: 1000;
+    box-shadow: 0 0 10px #666;
+    padding: 2rem;
+    &-logo img {
+      width: 20rem;
+      justify-content: space-between;
+    }
+    &-menu {
+      position: absolute;
+      width: 100%;
+      /* height: calc(100vh - 60px); */
+      left: 0;
+      top: 62px;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.75);
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+      z-index: 2;
+      padding: 0;
+  
+      li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        line-height: 2;
+        a {
+          display: block;
+        }
+      }
+  
+      li:hover {
+        text-align: center;
+        background-color: black;
+  
+        a {
+          color: white;
+        }
+      }
+  
+      &.is-active {
+        max-height: 250px;
+        overflow: visible;
+        background-color: white;
+      }
+    }
+  }
+
+  .menubar {
+    display: block;
+    display: flex;
+    align-items: center;
+    order: 1;
+    padding-left: 0.3rem;
+
+    .icon-close {
+      display: none;
+    }
+  }
+
+
+  .overlay {
+    z-index: 1;
+    background-color: gray;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.35s ease-in-out;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@include maxw(768px) {
+  .header {
+    padding: 1rem;
+    &-logo img {
+      width: 18rem;
+    }
+    &-menu {
+      top: 46px;
+    }
+  }
+
+}
