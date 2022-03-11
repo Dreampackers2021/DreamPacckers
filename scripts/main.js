@@ -59,7 +59,7 @@ btns.forEach((btn, i) => {
   });
 
   // Javascript for image slider autoplay navigation
- /*  var repeat = function (activeClass) {
+   var repeat = function (activeClass) {
     let active = document.getElementsByClassName("active");
     console.log(active);
     let i = 1;
@@ -85,5 +85,5 @@ btns.forEach((btn, i) => {
     };
     repeater();
   };
-  repeat(); */
+  repeat(); 
 });
