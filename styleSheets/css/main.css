@@ -277,6 +277,13 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .header-menu-list {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
 @media screen and (min-width: 1159px) {
   .header-menu-list:not(:last-child):after {
     content: "/";
@@ -421,8 +428,10 @@ a {
   }
 }
 
-.footer {
-  margin-top: 15rem;
+@media screen and (min-width: 1025px) {
+  .footer {
+    margin-top: 15rem;
+  }
 }
 
 .footer-title {
@@ -450,7 +459,6 @@ a {
 }
 
 .banner {
-  z-index: 3;
   height: 83rem;
 }
 
@@ -534,6 +542,7 @@ a {
   .banner-desc {
     font-size: 1.1rem;
     width: 100%;
+    font-weight: 700;
   }
 }
 
@@ -542,7 +551,6 @@ a {
   -o-object-fit: contain;
      object-fit: contain;
   position: absolute;
-  top: 26.6rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -550,11 +558,13 @@ a {
 .banner-img-l {
   max-width: 43.8rem;
   left: 47%;
+  top: 26.6rem;
 }
 
 .banner-img-r {
   max-width: 26.2rem;
   left: 50%;
+  top: 28rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -659,7 +669,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .client {
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
 }
 
@@ -703,7 +713,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .company {
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 }
 
@@ -712,6 +722,7 @@ a {
     top: 7rem;
     font-size: 4.5rem;
     letter-spacing: unset;
+    font-weight: 700;
   }
   .banner-img-l {
     left: 46%;
@@ -744,7 +755,7 @@ a {
 }
 
 .sale-subtitle {
-  font-weight: 600;
+  font-weight: 700;
   line-height: 2;
   font-size: 1.9rem;
 }

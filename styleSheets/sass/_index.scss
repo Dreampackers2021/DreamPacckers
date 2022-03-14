@@ -12,7 +12,6 @@
 }
 
 .banner {
-  z-index: 3;
   @include minw(1025px) {
     @include flex(null, null);
   }
@@ -68,26 +67,27 @@
     @include maxw(1024px) {
       top: 30rem;
     }
-
     @include maxw(768px) {
       font-size: 1.1rem;
       width: 100%;
+      font-weight: 700;
     }
   }
   &-img {
     width: 100%;
     object-fit: contain;
     position: absolute;
-    top: 26.6rem;
+
     transform: translateX(-50%);
-    
     &-l {
       max-width: 43.8rem;
       left: 47%;
+      top: 26.6rem;
     }
     &-r {
       max-width: 26.2rem;
       left: 50%;
+      top: 28rem;
     }
     @include maxw(1024px) {
       top: 13rem;
@@ -171,7 +171,7 @@
     margin-top: 9rem;
   }
   @include maxw(768px) {
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
 }
 
@@ -199,7 +199,7 @@
     }
   }
   @include maxw(768px) {
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 }
 
@@ -209,6 +209,7 @@
       top: 7rem;
       font-size: 4.5rem;
       letter-spacing: unset;
+      font-weight: 700;
     }
     &-img-l {
       left: 46%;
