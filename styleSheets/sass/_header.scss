@@ -37,6 +37,10 @@
       @include maxw (1440px ) {
         font-size: 2rem;
       }
+      @include maxw (768px ) {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
     }
 
     @media screen and (min-width: 1159px) {
@@ -45,8 +49,6 @@
         padding-left: 0.5rem;
       }
     }
-
-    
   }
 
   &-icon {
