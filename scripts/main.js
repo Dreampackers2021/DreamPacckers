@@ -14,7 +14,6 @@
 $(document).ready(function () {
   $(".header").load("header.html");
   $(".footer").load("footer.html");
-  console.log(location.href);
 });
 
 // slider
@@ -59,7 +58,7 @@ btns.forEach((btn, i) => {
   });
 
   // Javascript for image slider autoplay navigation
-   var repeat = function (activeClass) {
+  var repeat = function (activeClass) {
     let active = document.getElementsByClassName("active");
     console.log(active);
     let i = 1;
@@ -85,5 +84,5 @@ btns.forEach((btn, i) => {
     };
     repeater();
   };
-  repeat(); 
+  repeat();
 });

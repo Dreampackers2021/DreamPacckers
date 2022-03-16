@@ -34,6 +34,11 @@
       a {
         color: black;
       }
+
+      &:hover a {
+        color: $yellow;
+      }
+
       @include maxw (1440px ) {
         font-size: 2rem;
       }
@@ -46,7 +51,7 @@
     @media screen and (min-width: 1159px) {
       &-list:not(:last-child):after {
         content: "/";
-        padding-left: 0.5rem;
+        padding: 0 0.5rem;
       }
     }
   }

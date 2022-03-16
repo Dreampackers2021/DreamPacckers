@@ -271,6 +271,10 @@ a {
   color: black;
 }
 
+.header-menu-list:hover a {
+  color: #c0982f;
+}
+
 @media screen and (max-width: 1440px) {
   .header-menu-list {
     font-size: 2rem;
@@ -287,7 +291,7 @@ a {
 @media screen and (min-width: 1159px) {
   .header-menu-list:not(:last-child):after {
     content: "/";
-    padding-left: 0.5rem;
+    padding: 0 0.5rem;
   }
 }
 
@@ -535,11 +539,6 @@ a {
 @media screen and (max-width: 1024px) {
   .banner-desc {
     top: 30rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .banner-desc {
     font-size: 1.1rem;
     width: 100%;
     font-weight: 700;
@@ -556,30 +555,30 @@ a {
 }
 
 .banner-img-l {
-  max-width: 43.8rem;
+  max-width: 45.5rem;
   left: 47%;
-  top: 26.6rem;
+  top: 12rem;
 }
 
 .banner-img-r {
-  max-width: 26.2rem;
+  max-width: 46.2rem;
   left: 50%;
-  top: 28rem;
+  top: 16.5rem;
 }
 
 @media screen and (max-width: 1024px) {
   .banner-img {
-    top: 13rem;
-    max-width: 27rem;
     -o-object-fit: cover;
        object-fit: cover;
   }
   .banner-img-l {
-    left: 48.5%;
+    top: 3.5rem;
+    max-width: 30rem;
+    left: 50%;
   }
   .banner-img-r {
-    top: 12rem;
-    max-width: 20rem;
+    top: 6.5rem;
+    max-width: 28rem;
   }
 }
 
@@ -724,9 +723,6 @@ a {
     letter-spacing: unset;
     font-weight: 700;
   }
-  .banner-img-l {
-    left: 46%;
-  }
   .banner .btn {
     width: 15rem;
     height: 4rem;
@@ -750,7 +746,7 @@ a {
 .sale-title {
   font-size: 1.5rem;
   padding: 1.5rem 0;
-  font-size: 11.8rem;
+  font-size: 10.8rem;
   line-height: normal;
 }
 
@@ -863,7 +859,7 @@ a {
   }
   .product-item {
     width: 100%;
-    padding-top: 30px;
+    padding-top: 50px;
   }
   .product-img {
     height: 300px;
