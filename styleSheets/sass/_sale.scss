@@ -105,6 +105,7 @@
 @include maxw(768px) {
   .page {
     padding-top: 2rem;
+    padding-bottom: 4rem;
     &-content {
       padding: 0.8rem;
     }

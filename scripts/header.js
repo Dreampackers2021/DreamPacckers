@@ -32,6 +32,10 @@ if (navMenu && menuIcon && bgOverlay) {
   bgOverlay.addEventListener("click", () => {
     showHiddenMenu();
   });
+
+  bgOverlay.addEventListener("scroll", () => {
+    showHiddenMenu();
+  });
 }
 
 //Hide Menu when Click the Links
