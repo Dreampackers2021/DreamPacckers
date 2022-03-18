@@ -143,8 +143,11 @@ table {
 }
 
 @font-face {
-  font-family: "Highway Gothic Narrow";
-  src: url(./assets/fonts/Highway-Gothic-Narrow.ttf);
+  font-family: 'Highway Gothic Narrow';
+  src: url("/assets/fonts/HighwayGothicNarrow.woff2") format("woff2"), url("/assets/fonts/HighwayGothicNarrow.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
 }
 
 html {
@@ -990,6 +993,43 @@ a {
   }
   .banner .navigation .dot.active {
     background-color: burlywood;
+  }
+}
+
+#BackToTop {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #c0982f;
+  position: fixed;
+  bottom: 1rem;
+  right: 3%;
+  text-align: center;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+#BackToTop span {
+  color: white;
+  line-height: 40px;
+  font-size: 30px;
+  vertical-align: center;
+}
+
+#BackToTop:hover {
+  background-color: black;
+}
+
+#BackToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: 1921px) {
+  #BackToTop {
+    right: 14%;
   }
 }
 
