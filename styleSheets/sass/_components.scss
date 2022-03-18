@@ -81,3 +81,37 @@
     }
   }
 }
+
+//button back to top
+
+#BackToTop {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: $yellow;
+  position: fixed;
+  bottom: 1rem;
+  right: 3%;
+  text-align: center;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  span {
+    color: white;
+    line-height: 40px;
+    font-size: 30px;
+    vertical-align: center;
+  }
+  &:hover {
+    background-color: black;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include minw(1921px) {
+    right: 14%;
+  }
+}
