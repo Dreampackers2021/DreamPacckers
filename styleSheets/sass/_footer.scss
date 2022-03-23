@@ -11,5 +11,10 @@
     font-size: 1.1rem;
     color: white;
   }
+  @include maxw(1024px){
+    &-title {
+    font-size: 1rem;
+    }
+  }
 }
 
