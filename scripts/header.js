@@ -3,8 +3,7 @@ const menuIcon = document.querySelector("#MenuBar");
 const navMenu = document.querySelector("#Nav");
 const bgOverlay = document.getElementById("overlay");
 var navLinks = navMenu.querySelectorAll("li a");
-var iconOpen = menuIcon.querySelector(".icon-open");
-var iconClose = menuIcon.querySelector(".icon-close");
+var menuHambuger = menuIcon.querySelector("span");
 
 function changeIcon() {
   if (navMenu.classList.contains("is-active")) {
@@ -19,7 +18,8 @@ function changeIcon() {
 function showHiddenMenu() {
   navMenu.classList.toggle("is-active");
   bgOverlay.classList.toggle("is-active");
-  changeIcon();
+  menuHambuger.classList.toggle("is-active");
+  /* changeIcon(); */
 }
 
 if (navMenu && menuIcon && bgOverlay) {

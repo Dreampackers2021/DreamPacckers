@@ -3,11 +3,6 @@
   > section:not(:first-child) {
     margin-left: 6.5rem;
     margin-right: 6.5rem;
-
-    @include maxw(768px) {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
   }
 }
 
@@ -31,27 +26,6 @@
       height: auto;
     }
   }
-  &-heading {
-    position: absolute;
-    top: 10rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 11.8rem;
-    line-height: 0.9;
-    letter-spacing: -3px;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    &-r {
-      font-size: 14.1rem;
-      top: 13rem;
-    }
-    @include maxw(1024px) {
-      top: 3rem;
-      font-size: 7rem;
-      max-width: 40rem;
-    }
-  }
   &-desc {
     position: absolute;
     top: 53rem;
@@ -64,12 +38,6 @@
     text-align: center;
     //文字詰め
     font-feature-settings: "palt";
-    @include maxw(1024px) {
-      top: 30rem;
-      font-size: 1.1rem;
-      width: 100%;
-      font-weight: 700;
-    }
   }
   &-img {
     width: 100%;
@@ -87,18 +55,6 @@
       left: 50%;
       top: 16.5rem;
     }
-    @include maxw(1024px) {
-      object-fit: cover;
-      &-l {
-        top: 3.5rem;
-        max-width: 30rem;
-        left: 50%;
-      }
-      &-r {
-        top: 6.5rem;
-        max-width: 28rem;
-      }
-    }
   }
   .btn {
     height: 6rem;
@@ -113,13 +69,6 @@
     a {
       color: white;
       font-size: 4.1rem;
-    }
-    @include maxw(1024px) {
-      top: 38rem;
-      height: 5rem;
-      a {
-        font-size: 3rem;
-      }
     }
   }
   .btn:hover {
@@ -136,7 +85,6 @@
 
 .news {
   margin-top: 4.5rem;
-
   &-list {
     line-height: 1.5;
     li {
@@ -157,20 +105,12 @@
     color: $yellow;
   }
 }
-
 .client {
   margin-top: 11rem;
   &-info {
     padding-top: 0.5rem !important;
   }
-  @include maxw(1024px) {
-    margin-top: 9rem;
-  }
-  @include maxw(768px) {
-    margin-top: 5rem;
-  }
 }
-
 .company {
   margin-top: 11rem;
   &-info {
@@ -180,8 +120,39 @@
     font-size: 1.3rem;
     line-height: 2.3;
   }
-
-  @include maxw(1024px) {
+}
+@include maxw(1024px) {
+  .banner { 
+    &-desc {
+      top: 30rem;
+      font-size: 1.1rem;
+      width: 100%;
+      font-weight: 700;
+    }
+    &-img {
+      object-fit: cover;
+      &-l {
+        top: 3.5rem;
+        max-width: 30rem;
+        left: 50%;
+      }
+      &-r {
+        top: 6.5rem;
+        max-width: 28rem;
+      }
+    }
+    .btn {
+      top: 38rem;
+      height: 5rem;
+      a {
+        font-size: 3rem;
+      }
+    }
+  }
+  .client {
+    margin-top: 9rem;
+  }
+  .company {
     margin-top: 9rem;
 
     &-info {
@@ -193,20 +164,19 @@
     &-info-en {
       margin-top: 1.5rem;
     }
-  }
-  @include maxw(768px) {
-    margin-top: 5rem;
+
   }
 }
 
 @include maxw(768px) {
-  .banner {
-    &-heading {
-      top: 7rem;
-      font-size: 4.5rem;
-      letter-spacing: unset;
-      font-weight: 700;
+  .main-content {
+    > section:not(:first-child) {
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
+    
+  }
+  .banner {
     .btn {
       width: 15rem;
       height: 4rem;
@@ -216,7 +186,6 @@
     }
   }
   .news {
-    
     &-list {
         padding-top: 0 !important;
       li {
@@ -229,5 +198,12 @@
     &-date {
       margin-bottom: 0.6rem;
     }
+  }
+  .client {
+    margin-top: 5rem;
+
+  }
+  .company {
+    margin-top: 5rem;
   }
 }
