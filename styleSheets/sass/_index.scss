@@ -43,17 +43,16 @@
     width: 100%;
     object-fit: contain;
     position: absolute;
-
+    top: 12rem;
     transform: translateX(-50%);
     &-l {
       max-width: 45.5rem;
       left: 47%;
-      top: 12rem;
+      
     }
     &-r {
-      max-width: 46.2rem;
+      max-width: 38.5rem;
       left: 50%;
-      top: 16.5rem;
     }
   }
   .btn {
@@ -124,21 +123,20 @@
 @include maxw(1024px) {
   .banner { 
     &-desc {
-      top: 30rem;
+      top: 32rem;
       font-size: 1.1rem;
       width: 100%;
       font-weight: 700;
     }
     &-img {
       object-fit: cover;
+      top: 5rem;
       &-l {
-        top: 3.5rem;
         max-width: 30rem;
         left: 50%;
       }
       &-r {
-        top: 6.5rem;
-        max-width: 28rem;
+        max-width: 25rem;
       }
     }
     .btn {
