@@ -1016,11 +1016,5 @@ a {
   visibility: visible;
 }
 
-@media screen and (min-width: 1921px) {
-  #BackToTop {
-    right: 14%;
-  }
-}
-
 /* @use 'mixin' as m; */
 /*# sourceMappingURL=main.css.map */
