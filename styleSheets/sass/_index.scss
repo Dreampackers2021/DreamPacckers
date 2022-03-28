@@ -5,7 +5,6 @@
     margin-right: 6.5rem;
   }
 }
-
 .banner {
   @include minw(1025px) {
     @include flex(null, null);
@@ -77,11 +76,9 @@
     color: white;
   }
 }
-
 .content-text-padding {
   padding: 2rem 0 0 1rem;
 }
-
 .news {
   margin-top: 4.5rem;
   &-list {
@@ -165,7 +162,6 @@
 
   }
 }
-
 @include maxw(768px) {
   .main-content {
     > section:not(:first-child) {
