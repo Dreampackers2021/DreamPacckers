@@ -2,8 +2,8 @@
 const menuIcon = document.querySelector("#MenuBar");
 const navMenu = document.querySelector("#Nav");
 const bgOverlay = document.getElementById("overlay");
-var navLinks = navMenu.querySelectorAll("li a");
-var menuHambuger = menuIcon.querySelector("span");
+let navLinks = navMenu.querySelectorAll("li a");
+let menuHambuger = menuIcon.querySelector("span");
 
 function showHiddenMenu() {
   navMenu.classList.toggle("is-active");
