@@ -53,20 +53,3 @@ btns.forEach((btn, i) => {
   repeat();
 });
 
-const arr = ['Nike', 'Adidas', 'NB', 'Dior', 'LV'];
-let newArr2 = arr.slice(3, 5);
-console.log(newArr2);
-
-let arr9 = [1, 2, 3, 4, 5];
-/* let newArr = arr9.splice(3, 2);  */// hiểu sai về hàm splice. 4 là số lượng phần tử cần xóa chỗ này chỉ truyền vào 2. (3, 2) => Bắt đầu từ vị trí thứ 3.
-// splice nó không tạo ra mảng mới mà nó sẽ thao tác trên mảng cũ
-arr9.splice(arr9.length - 2);
-console.log(arr9);
-
-const isEvenV2 = (number) => number % 2 === 0;
-
-if (isEvenV2) {
-    console.log('Số chẵn');
-} else {
-    console.log('Số lẽ');
-}
