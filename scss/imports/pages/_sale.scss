@@ -72,9 +72,19 @@
 }
 
 @include maxw(1440px) {
+  .page {
+    padding-top: 5rem;
+  }
+  .sale {
+    &-title {
+      font-size: 8rem;
+    }
+  }
   .product {
+    margin-top: unset;
     &-item {
       width: calc(33.33% - 25px);
+      padding-top: 5rem;
     }
   }
 }
