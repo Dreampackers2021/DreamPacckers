@@ -15,63 +15,85 @@
     <link rel="stylesheet" href="dest/style.min.css" />
     <link rel="stylesheet" href="dest/fonts.css" />
   </head>
-  <body>
-    <section class="top__banner">
-      <div class="container">
-        <a href="#" class="top__banner-logo">
-          <img src="" alt="" />
-        </a>
-        <!-- use background -->
-        <div class="top__banner-img">
-          <img src="" alt="" />
-        </div>
-      </div>
-    </section>
-    <section class="questions">
-      <div class="container">
-        <div class="question__top">
-          <div class="question question__top-mobareki">
-            <div class="btnmain title">モバレキシステムとは？</div>
-            <div class="img"></div>
-          </div>
-          <div class="question question__top-se">
-            <div class="title">モ簡単に使える？</div>
-            <div class="img"></div>
+  <body class="mobarekipage">
+    <div class="wrapper">
+      <section class="banner-top">
+        <div class="container">
+          <a href="#" class="banner-top__logo">
+            <img src="./img/mobareki-new/mobareki-LP-logo.svg" alt="" />
+          </a>
+          <!-- use background -->
+          <div class="banner-top__img">
+            <img src="./img/mobareki-new/top-banner.png" alt="" />
           </div>
         </div>
-        <div class="question__bottom">
-          <div class="question question__bottom-cost">
-            <div class="title">いますぐ始められる？コストは？</div>
-            <div class="img"></div>
+      </section>
+      <section class="questions">
+        <div class="container">
+          <div class="question__top flex">
+            <div class="question question__top-mobareki">
+              <h4 class="bubble --big">モバレキシステムとは？</h4>
+              <div class="user-img">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div class="question question__top-se">
+              <h4 class="bubble --big --title">簡単に使える？</h4>
+              <div class="user-img"><img src="" alt="" /></div>
+            </div>
           </div>
-          <div class="question question__bottom-review">
-            <div class="title">実際に使っているユーザーの感想を知りたい！</div>
-            <div class="img"></div>
-          </div>
-          <div class="question question__bottom-support">
-            <div class="title">アフターフォローやサポートはありますか？</div>
-            <div class="img"></div>
+          <div class="question__bottom flex">
+            <div class="question question__bottom-cost">
+              <h5 class="bubble --small">
+                <span>いますぐ始められる？コストは？</span>
+              </h5>
+              <div class="user-img"><img src="" alt="" /></div>
+            </div>
+            <div class="question question__bottom-review">
+              <h5 class="bubble --medium">
+                <span>実際に使っている<br />ユーザーの感想を知りたい！</span>
+              </h5>
+              <div class="user-img"><img src="" alt="" /></div>
+            </div>
+            <div class="question question__bottom-support">
+              <h5 class="bubble --small">
+                <span>アフターフォローやサポートはありますか？</span>
+              </h5>
+              <div class="user-img"><img src="" alt="" /></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="mobareki-sytem">
-      <div class="container title-main">採用管理 とは？</div>
-      <div class="mobareki-system__slider">
-        <div class="mobareki-system__slider-item">
-          <div class="img">
-            <img src="" alt="" />
-          </div>
-          <div class="button">
-            <span>サンプルページはこちら</span>
-          </div>
+      </section>
+      <section class="mobareki-sytem">
+        <div class="container question-heading --heading-1">
+          <h3>
+            採用管理<br />
+            MOBAREKI SYSTEMとは？
+          </h3>
         </div>
-      </div>
-    </section>
+        <div class="mobareki-system__slider answer-banner">
+            <div class="mobareki-system__slider-item">
+              <div class="text-charater">
+                <h2 class="infomain">
+                  <p>
+                    接客販売に特化した<br>採用管理<br>システムです。</span>
+                  </p>
+                </h2>
+                <div class="character">
+                  <img src="./img/mobareki-new/character.png" alt="" />
+                </div>
+              </div>
+              <div class="button">
+                <span>サンプルページはこちら</span>
+              </div>
+            </div>
+        
+        </div>
+      </section>
+    </div>
 
     <!-- *** javascript *** -->
     <script src="./js/libs/jquery-3.6.0.min.js"></script>
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/fixmenu_pagetop.js"></script>
+    <script src="./dest/main.js"></script>
   </body>
 </html>

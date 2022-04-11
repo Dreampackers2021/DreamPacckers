@@ -121,3 +121,151 @@
     visibility: visible;
   }
 }
+
+//mobarekipage-吹き出しボックス
+.break {
+  word-break: break-all;
+}
+.bubble {
+  cursor: pointer;
+  position: relative;
+  border: 2px solid $black-cl;
+  text-align: center;
+  height: 110px;
+  @include flex(center, center);
+  &.--big {
+    width: 460px;
+  }
+  &.--medium {
+    max-width: 385px;
+  }
+  &.--small {
+    max-width: 320px;
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 40.4%;
+    right: auto;
+    top: auto;
+    bottom: -15px;
+    border: 15px solid;
+    border-color: $white-cl transparent transparent $white-cl;
+  }
+  &:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 40%;
+    right: auto;
+    top: auto;
+    bottom: -20px;
+    border: 10px solid;
+    border-color: $black-cl transparent transparent $black-cl;
+  }
+  &:hover{
+    background-color: $yellow-light-cl;
+    &:after {
+      border-color: $yellow-light-cl transparent transparent $yellow-light-cl;
+    }
+  }
+  @include maxw(1200px) {
+    height: 90px;
+    &.--big {
+      width: 320px;
+    }
+    &.--medium {
+      max-width: 320px;
+    }
+  }
+  @include maxw(768px) {
+    &.--big,
+    &.--medium,
+    &.--small {
+      width: 280px;
+    }
+    br{
+      display: none;
+    }
+  }
+}
+
+.question-heading {
+  font-size: 48px;
+  line-height: 1.76;
+  letter-spacing: 0.13em;
+  font-weight: bold;
+  margin-bottom: 60px;
+  &.--heading-1 {
+    line-height: 1.4;
+  }
+  h3 {
+    display: inline-block;
+    position: relative;
+    // max-width: 640px;
+    padding-left: 230px;
+    text-align: center;
+    &:before {
+      content: "";
+      height: 3px;
+      width: 90px;
+      background-color: $black-cl;
+      position: absolute;
+      bottom: 50px;
+      left: 120px;
+      transform: rotate(55deg);
+    }
+    &:after {
+      content: "";
+      height: 3px;
+      width: 90px;
+      background-color: $black-cl;
+      position: absolute;
+      bottom: 50px;
+      right: -90px;
+      transform: rotate(-55deg);
+    }
+  }
+}
+
+.answer-banner {
+  background-color: $yellow-light-cl;
+  max-height: 695px;
+  overflow: hidden;
+}
+
+.text-charater {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  .infomain {
+    --mTopInfo: 80px;
+    --pInfo: 75px;
+    display: inline-flex;
+    font-size: 72px;
+    line-height: 1.72;
+    letter-spacing: 0.2em;
+    margin-top: var(--mTopInfo);
+    border: 3px solid #fff;
+    padding: var(--pInfo);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .character {
+    position: absolute;
+    right: 300px;
+    top: 55px;
+    max-width: 280px;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
