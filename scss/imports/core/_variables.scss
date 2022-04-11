@@ -1,5 +1,6 @@
-$primary-font: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;
-$secondary-font: 'Highway Gothic Narrow', 'Overpass', sans-serif;
+$primary-font: "小塚ゴシック Pro", "Kozuka Gothic Pro", sans-serif;
+$secondary-font: "Highway Gothic Narrow", "Overpass", sans-serif;
+$third-font: "mgp", sans-serif;
 
 $color-primary: #d8d7c8;
 $color-secondary: #c4c9cd;
@@ -11,3 +12,10 @@ $yellow-light-cl: #ffe200;
 $white-cl: #fff;
 $black-cl: #000;
 $blue-cl: #1f2a66;
+
+$max-width-1: 1110px;
+// $gap: 30px;
+
+:root {
+  --pLeftContainer: 95px;
+}
