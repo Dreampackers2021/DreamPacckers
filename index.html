@@ -4,38 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styleSheets/css/main.css" />
-    <!-- googele icons -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
-      rel="stylesheet"
-    />
+    <link rel="shortcut icon" href="img/share/favicon.ico" />
+  
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
     <title>Dream Packers</title>
   </head>
   <body>
@@ -47,10 +25,9 @@
             <div class="banner-l slider active">
               <img
                 class="banner-img banner-img-l"
-                src="./assets/img/banner-l.png"
+                src="img/top/banner-l.svg"
                 alt=""
               />
-              <div class="banner-heading font-secondary">sales promotion</div>
               <p class="banner-desc">
                 VMDの視点でブランドPRから<br />
                 採用の領域までトータルプロデュース
@@ -62,18 +39,15 @@
             <div class="banner-r slider">
               <img
                 class="banner-img banner-img-r"
-                src="./assets/img/banner-r.png"
+                src="img/top/banner-r.svg"
                 alt=""
               />
-              <div class="banner-heading banner-heading-r font-secondary">
-                MOBAREKI
-              </div>
               <p class="banner-desc">
                 MOBAREKIは、ブランドを「好き」なファンを<br />
                 採用のコアターゲットとした、新発想の採用管理モデル
               </p>
               <button class="btn font-secondary">
-                <a href="#" class="font-secondary">VIEW MORE</a>
+                <a href="./mobareki.html" class="font-secondary">VIEW MORE</a>
               </button>
             </div>
             <div class="navigation">
@@ -85,45 +59,26 @@
             <h2 class="news-title">news</h2>
             <ul class="content-text-padding news-list">
               <li>
-                <a href="#">
-                  <span class="news-date">2022.1.1</span>
-                  <p class="news-info">ニュースニュースニュースニュース</p>
-                </a>
+                <time class="news-date">2022.0４.05</time>
+                <p class="news-info">Dream Packersのサイトを全面リニューアルをいたしました。</p>
               </li>
               <li>
-                <a href="#">
-                  <span class="news-date">2022.1.1</span>
-                  <p class="news-info">ニュースニュースニュースニュース</p>
-                </a>
+                <time class="news-date">2021.12.15</time>
+                <p cl-dateass="news-info">
+                  平素は格別のご高配を賜り厚く御礼申し上げます。<br />
+                  弊社では、誠に勝手ながら下記の通り休業を実施させて頂きます。<br />
+                  休業期間：2021年12月29日（火）〜2022年1月4（月）<br />
+                  休業期間中にいただいたお問い合わせにつきましては休業期間後からのご対応になる旨、重ねてご了承頂けましたら幸いです。大変<br />ご不便をおかけいたしますが、何卒ご理解の程お願い申し上げます。
+                </p>
               </li>
               <li>
-                <a href="#">
-                  <span class="news-date">2022.1.1</span>
-                  <p class="news-info">ニュースニュースニュースニュース</p>
-                </a>
+                <time class="news-date">2021.01.28</time>
+                <p class="news-info">MOBAREKI.comサイトサービス終了のご案内</p>
               </li>
               <li>
-                <a href="#">
-                  <span class="news-date">202.1.1</span>
-                  <p class="news-info">ニュースニュースニュースニュース</p>
-                </a>
+                <time class="news-date">2020.12.14</time>
+                <p class="news-info">年末年始休業のお知らせ 12/14更新</p>
               </li>
-
-             <!--  <li>
-                <a href=""
-                  >・Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </a>
-              </li>
-              <li>
-                <a href=""
-                  >・Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </a>
-              </li>
-              <li>
-                <a href=""
-                  >・Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </a>
-              </li> -->
             </ul>
           </section>
           <section class="client" id="client">
@@ -169,11 +124,14 @@
           </section>
         </main>
         <footer class="footer"></footer>
+        <a id="BackToTop">
+        </a>
       </div>
     </div>
     <!-- js file -->
-    <script src="./library/jquery-3.6.0.min.js"></script>
+    <script src="./dest/jsmain.min.js"></script>
+    <script src="./dest/main.js"></script>
+    <script src="./dest/fixmenu_pagetop.js"></script>
 
-    <script src="./scripts/main.js"></script>
   </body>
 </html>

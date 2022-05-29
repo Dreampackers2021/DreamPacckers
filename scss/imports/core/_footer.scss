@@ -1,0 +1,20 @@
+.footer {
+  @include minw(1025px) {
+    margin-top: 15rem;
+  }
+  
+  &-title {
+    height: 4.2rem;
+    line-height: 4.2rem;
+    background-color: $gray;
+    text-align: center;
+    font-size: 1.1rem;
+    color: white;
+  }
+  @include maxw(1024px){
+    &-title {
+    font-size: 1rem;
+    }
+  }
+}
+

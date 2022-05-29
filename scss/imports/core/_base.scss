@@ -1,0 +1,59 @@
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 15px;
+  line-height: 1;
+  margin: 0 auto;
+  &.mobarekipage {
+    font-family: $third-font;
+    font-weight: bold;
+  }
+}
+.wrapper {
+  line-height: 3;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 7rem;
+  text-transform: uppercase;
+  font-family: $secondary-font;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.font-secondary {
+  font-family: $secondary-font;
+}
+
+@include maxw(1024px) {
+  body {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  .wrapper {
+    line-height: 2;
+  }
+}
+
+@include maxw(768px) {
+  .break {
+    display: block;
+  }
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+}

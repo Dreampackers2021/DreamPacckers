@@ -1,0 +1,110 @@
+$primary-font: "小塚ゴシック Pro", "Kozuka Gothic Pro", sans-serif;
+$secondary-font: "Highway Gothic Narrow", "Overpass", sans-serif;
+$third-font: "mgp", sans-serif;
+
+$color-primary: #d8d7c8;
+$color-secondary: #c4c9cd;
+$gray: #9c9c9c;
+$yellow: #c0982f;
+
+//mobareki page
+$yellow-light-cl: #ffe200;
+$white-cl: #fff;
+$black-cl: #000;
+$blue-cl: #1f2a66;
+
+//font size
+
+$max-width-1: 1110px;
+// $gap: 30px;
+
+$xxs-max: 576px;
+$xs-max: 768px;
+$sm-max: 992px;
+$md-max: 1200px;
+$lg-max: 1600px;
+
+:root {
+  --pLeftContainer: 95px;
+
+  --body-14-fs: 14px;
+
+  --body-15-fs: 15px;
+
+  --body-16-fs: 16px;
+  --body-16-lh: 1.66;
+
+  --body-22-fs: 22px;
+  --body-22-lh: 1.5;
+  --body-22-ls: 0.1em;
+
+  --body-24-fs: 24px;
+  --body-24-ls: 0.15em;
+
+  --body-25-fs: 25px;
+  --body-25-ls: 0.05em;
+
+  --body-30-fs: 30px;
+  --body-30-ls: 0.05em;
+
+  --body-37-fs: 37px;
+  --body-37-ls: 0.1em;
+
+  --body-38-fs: 38px;
+  --body-38-ls: 0.18em;
+
+  --body-40-fs: 40px;
+  --body-40-ls: 0.15em;
+
+  --body-48-fs: 48px;
+
+  --body-94-fs: 94px;
+
+  --body-99-fs: 99px;
+
+  --contact-48-fs: 48px;
+
+  @media (max-width: $md-max) {
+    --body-14-fs: 11px;
+
+    --body-16-fs: 12px;
+    --body-16-lh: 1.5;
+
+    --body-25-fs: 19px;
+
+    --body-22-fs: 15px;
+
+    --body-37-fs: 29px;
+
+    --body-38-fs: 30px;
+    --body-38-ls: 0.1em;
+
+    --body-48-fs: 40px;
+
+    --body-94-fs: 88px;
+
+    --contact-48-fs: 35px;
+  }
+
+  @media (max-width: $sm-max) {
+    --body-25-fs: 17px;
+
+    --body-37-fs: 29px;
+
+    --body-38-fs: 19px;
+    --body-38-ls: 0.1em;
+
+    --body-48-fs: 21px;
+
+    --body-94-fs: 50px;
+
+    --body-99-fs: 65px;
+
+    --contact-48-fs: 28px;
+  }
+  @media (max-width: $xs-max) {
+    --body-30-fs: 20px;
+    --body-37-fs: 20px;
+    --contact-48-fs: 23px;
+  }
+}
