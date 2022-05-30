@@ -15,3 +15,21 @@
     font-style: normal;
     font-display: fallback;
 }
+
+@font-face {
+    font-family: 'rift';
+    src: url('/fonts/Rift-Regular.woff2') format('woff2'),
+        url('/fonts/Rift-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'fu';
+    src: url('/fonts/FuturaBT-Medium.woff2') format('woff2'),
+        url('/fonts/FuturaBT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

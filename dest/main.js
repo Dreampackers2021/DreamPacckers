@@ -53,3 +53,33 @@ btns.forEach((btn, i) => {
   repeat();
 });
 
+//when click menu - scroll to section
+let wrapper = document.querySelector("body");
+if (wrapper.classList.contains('mobarekipage')){
+  let menuLink = document.querySelectorAll('.bubble a')
+  let sections = [];
+  menuLink.forEach((link) => {
+    const className = link.getAttribute('href').replace('#','')
+    let section = document.querySelector("." + className);
+    sections.push(section)
+    link.addEventListener('click',(e)=> {
+      e.preventDefault()
+      window.scrollTo({top: section.offsetTop})
+    })
+  })
+
+  const buttontLink = document.querySelectorAll('a.button.--bg-yellow')
+  let divLinks = []
+  buttontLink.forEach((link)=> {
+    const buttonClass = link.getAttribute('href').replace('#','')
+    console.log(buttonClass)
+    const divLink = document.querySelector("." + buttonClass)
+    divLinks.push(divLink)
+    link.addEventListener('click',(e)=>{
+      e.preventDefault()
+      window.scrollTo({top: divLink.offsetTop})
+    })
+  })
+  
+
+}
