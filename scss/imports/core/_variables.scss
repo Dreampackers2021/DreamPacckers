@@ -5,6 +5,7 @@ $third-font: "mgp", sans-serif;
 $color-primary: #d8d7c8;
 $color-secondary: #c4c9cd;
 $gray: #9c9c9c;
+$gray-light: #ccc;
 $yellow: #c0982f;
 
 //mobareki page
@@ -34,6 +35,9 @@ $lg-max: 1600px;
   --body-16-fs: 16px;
   --body-16-lh: 1.66;
 
+  --body-18-fs: 18px;
+  --body-18-lh: 1.83; //30px
+
   --body-22-fs: 22px;
   --body-22-lh: 1.5;
   --body-22-ls: 0.1em;
@@ -58,6 +62,10 @@ $lg-max: 1600px;
 
   --body-48-fs: 48px;
 
+  --body-57-fs: 57px;
+
+  --body-72-fs: 72px;
+
   --body-94-fs: 94px;
 
   --body-99-fs: 99px;
@@ -81,12 +89,18 @@ $lg-max: 1600px;
 
     --body-48-fs: 40px;
 
+    --body-57-fs: 40px;
+    --body-72-fs: 60px;
+
     --body-94-fs: 88px;
 
     --contact-48-fs: 35px;
   }
 
   @media (max-width: $sm-max) {
+    --body-18-fs: 15px;
+    --body-18-lh: 1.7; //30px
+
     --body-25-fs: 17px;
 
     --body-37-fs: 29px;
@@ -103,8 +117,17 @@ $lg-max: 1600px;
     --contact-48-fs: 28px;
   }
   @media (max-width: $xs-max) {
+    --body-15-fs: 14px;
+    --body-18-fs: 12px;
+    --body-18-lh: 1.5;
     --body-30-fs: 20px;
     --body-37-fs: 20px;
     --contact-48-fs: 23px;
+    --body-57-fs: 32px;
+    --body-72-fs: 32px;
+  }
+  @media (max-width: 576px) {
+    --body-57-fs: 25px;
+    --body-72-fs: 25px;
   }
 }
