@@ -97,6 +97,7 @@
   }
   .questions {
     --pTop: 55px;
+    --gapBuble: 40px;
     padding-top: var(--pTop);
     .flex {
       @include flex(space-between, center);
@@ -104,7 +105,7 @@
     }
     .question {
       &__bottom {
-        margin-top: 40px;
+        margin-top: var(--gapBuble);
         h5 span {
           padding: 0 20px;
         }
@@ -113,18 +114,28 @@
     @include maxw(1200px) {
       .flex {
         justify-content: space-around;
-        gap: 40px;
+        gap: var(--gapBuble);
       }
     }
     @include maxw(768px) {
-      --pTop: 25px;
+      --pTop: 20px;
+      --gapBuble: 10px;
       .flex {
         gap: 15px;
+        width: 100%;
+        justify-content: flex-start;
       }
       .question {
         width: 100%;
-        &__bottom {
-          margin-top: 15px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        .user-img {
+          margin-left: unset !important;
+          margin-top: unset !important;
+          width: 70px;
+          height: 70px;
         }
       }
     }
@@ -448,14 +459,18 @@
     }
     .logo-list {
       width: unset;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 20px 40px;
     }
     @include maxw(768px) {
-      margin-bottom: 0;
-      li{
-        width: 45%;
-        img{
-          width: 90%;
-        }
+      &__title {
+        margin-bottom: 30px;
+      }
+      .logo-list {
+        margin-bottom: 0;
       }
     }
   }
@@ -463,6 +478,9 @@
     padding-top: var(--pTopSection);
     .prepation {
       .img {
+        max-width: 630px;
+        margin-left: auto;
+        margin-right: auto;
         img {
           width: 100%;
           height: 100%;
@@ -479,6 +497,7 @@
     .tool {
       &-list {
         --gapPost: 90px;
+        --wImg: 100%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -494,9 +513,11 @@
           }
           .img {
             height: 310px;
+            width: 100%;
             padding: 20px 0;
             img {
               height: 100%;
+              // width: var(--wImg);
               object-fit: cover;
             }
           }
@@ -562,12 +583,14 @@
       .tool {
         &-list {
           --gapPost: 40px;
+          --wImg: unset;
         }
       }
     }
   }
   .mobareki-contact {
     padding-top: 200px;
+    padding-bottom: 170px;
     max-width: 700px;
     margin: auto;
     text-align: center;
@@ -616,6 +639,7 @@
     }
     @include maxw(1200px) {
       padding-top: 100px;
+      padding-bottom: 50px;
     }
     @include maxw(768px) {
       padding-top: 70px;
@@ -629,6 +653,52 @@
         .img {
           width: 40px;
         }
+      }
+    }
+  }
+  footer {
+    &.mobareki-system-ft {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      text-align: center;
+      background-color: $gray-light;
+    }
+    .img {
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .fs-18 {
+      font-size: var(--body-18-fs);
+      line-height: var(--body-18-lh);
+    }
+    .copyright {
+      font-size: 12px;
+    }
+    @include maxw(1200px) {
+      &.mobareki-system-ft {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+      .img {
+        max-width: 250px;
+      }
+    }
+    @include maxw(768px) {
+      &.mobareki-system-ft {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      .img {
+        max-width: 200px;
+      }
+      .copyright {
+        font-size: 10px;
       }
     }
   }
