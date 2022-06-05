@@ -7,6 +7,15 @@
 //   }
 // }
 
+@keyframes rampDown {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .mobarekipage {
   --pTopSection: 130px;
   @include maxw(768px) {
@@ -61,6 +70,119 @@
       }
     }
   }
+  header {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    .logo-mobareki {
+      margin-top: 10px;
+      margin-left: 30px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &.is-active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: $white-cl;
+      height: 70px;
+      box-shadow: 0 0 10px #666;
+      .logo-mobareki {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    ul {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+      &.is-active {
+        display: flex;
+      }
+      li {
+        height: 100%;
+        position: relative;
+        a {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          letter-spacing: 0.15em;
+          &:after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            background-color: $black-cl;
+            position: absolute;
+            top: 70%;
+            left: 0;
+            transform: scaleX(0);
+            transition: 0.4s cubic-bezier(0.03, 0.52, 0.7, 0.63);
+          }
+          &:hover {
+            opacity: 0.6;
+            &:after {
+              transform: scaleX(1);
+              transition: 0.4s cubic-bezier(0.03, 0.52, 0.7, 0.63);
+            }
+          }
+        }
+        &.btn-contact {
+          display: inline-block;
+          height: 40px;
+          width: 120px;
+          display: flex;
+          justify-content: center;
+          background: $yellow-light-cl;
+          border-radius: 10px;
+          a:after {
+            content: unset;
+          }
+          &:hover {
+            transition: all 0.3s ease-out 0s;
+            box-shadow: -2px 11px 22px -2px rgba(0, 0, 0, 0.7);
+            -webkit-box-shadow: -2px 11px 22px -2px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: -2px 11px 22px -2px rgba(0, 0, 0, 0.7);
+            transform: scale(1.02);
+          }
+        }
+      }
+    }
+    @include maxw(992px) {
+      ul {
+        gap: 20px;
+      }
+    }
+    @include maxw(768px) {
+      .logo-mobareki {
+        margin-top: 10px;
+        margin-left: 0;
+      }
+      &.is-active {
+        height: 60px;
+      }
+      ul {
+        li {
+          &:not(.btn-contact) {
+            display: none;
+          }
+          &.btn-contact {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
   .banner-top {
     background-color: $yellow-light-cl;
     height: 500px;
@@ -70,28 +192,99 @@
       height: 100%;
       position: relative;
     }
-    &__logo {
-      margin-left: 30px;
-      max-width: 120px;
-      cursor: pointer;
-    }
-    &__img {
-      width: 100%;
-      height: 100%;
-      margin-top: 30px;
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 70px;
+      margin-top: 20px;
+      .left {
+        position: relative;
+        max-width: 430px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .sub-text {
+          max-width: 220px;
+          width: 100%;
+          margin: auto;
+          animation: rampDown 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+          animation-delay: 0.1s;
+        }
+        .title-text {
+          max-width: 350px;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          animation: rampDown 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+          animation-delay: 0.3s;
+        }
+        .slogan {
+          position: absolute;
+          font-size: 19px;
+          font-weight: normal;
+          line-height: normal;
+          letter-spacing: 0.34em;
+          background-color: $white-cl;
+          display: inline-block;
+          padding: 5px 5px;
+          &.--l {
+            left: 0;
+            top: 220px;
+          }
+          &.--r {
+            right: 0;
+            top: 280px;
+          }
+        }
+      }
       img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
-        position: absolute;
-        top: 0;
-        right: initial;
+        object-fit: cover;
       }
     }
     @include maxw(992px) {
-      height: 250px;
-      &__logo {
-        margin-left: 0px;
+      height: auto;
+      &__content {
+        gap: 0px;
+        .left {
+          align-items: center;
+          .sub-text {
+            width: 150px;
+          }
+          .title-text {
+            width: 200px;
+          }
+          .slogan {
+            font-size: 14px;
+            position: unset;
+            display: inline-block;
+          }
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+    @include maxw(576px) {
+      &__content {
+        .left {
+          .sub-text {
+            width: 120px;
+          }
+          .title-text {
+            width: 150px;
+          }
+          .slogan {
+            font-size: 12px;
+            letter-spacing: initial;
+          }
+        }
+        .right {
+          width: 80%;
+        }
       }
     }
   }
@@ -153,11 +346,17 @@
     &__info {
       text-align: center;
     }
+    &__capable {
+      padding-top: 70px !important;
+    }
     @include maxw(768px) {
       --pTopSection: 80px;
       &__info {
         padding-left: 0;
         padding-right: 0;
+      }
+      &__capable {
+        padding-top: 30px !important;
       }
     }
   }
@@ -259,6 +458,7 @@
     }
     &__flow {
       color: $blue-cl;
+      padding-top: 120px;
       &-subtitle {
         font-size: var(--body-37-fs);
         line-height: normal;
@@ -310,6 +510,7 @@
         }
       }
       &__flow {
+        padding-top: 50px;
         &-steps {
           gap: 8px;
           .step {
@@ -435,6 +636,9 @@
             }
             .content-company {
               padding: 15px;
+              .desc{
+                font-weight: normal;
+              }
             }
           }
           .customer-img {
@@ -464,6 +668,17 @@
       align-items: center;
       justify-content: center;
       margin: 20px 20px 40px;
+      li{
+        .img{
+          max-width: 150px;
+          width: 100%;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+          }
+        }
+      }
     }
     @include maxw(768px) {
       &__title {
@@ -471,6 +686,11 @@
       }
       .logo-list {
         margin-bottom: 0;
+        li{
+          .img{
+            max-width: 100px;
+          }
+        }
       }
     }
   }
@@ -644,7 +864,7 @@
     @include maxw(768px) {
       padding-top: 70px;
       .contact__title {
-        padding: 20px 60px;
+        padding: 20px;
         letter-spacing: 0.05em;
       }
       .contact-grid {
