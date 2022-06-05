@@ -132,6 +132,9 @@
   }
 }
 
+.mb-20-lg {
+  margin-bottom: 20px;
+}
 .mb-35-lg {
   margin-bottom: 35px;
 }
@@ -175,6 +178,9 @@
   }
   .mb-20-sm {
     margin-bottom: 20px;
+  }
+  .mb-10-sm {
+    margin-bottom: 10px;
   }
 }
 
@@ -325,7 +331,7 @@
 .user-img {
   max-width: 200px;
   &.--margin {
-    margin-left: 27%;
+    margin-left: 20%;
     margin-top: 5%;
   }
   &.--mL {
@@ -370,6 +376,7 @@
     width: var(--wInfo);
     height: var(--hInfo);
     font-size: var(--body-72-fs);
+    font-weight: bold;
     line-height: 1.72;
     letter-spacing: 0.2em;
     margin-top: var(--mTopInfo);
@@ -510,7 +517,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   align-items: flex-start;
   &.--flex-reverse {
     flex-direction: row-reverse;
@@ -589,7 +596,8 @@
     .text {
       --mrSpan: 0;
       font-size: 18px;
-      padding: 30px 0 10px !important;
+      letter-spacing: 0.05em;
+      padding: 15px 0 10px !important;
       text-align: center;
       &.--mt-sm{
         margin-top: -30px;
